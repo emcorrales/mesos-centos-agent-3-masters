@@ -1,5 +1,5 @@
 #!/bin/bash
-FROM ubuntu:18.04
+FROM centos:7
 
 RUN rpm -Uvh http://repos.mesosphere.io/el/7/noarch/RPMS/mesosphere-el-repo-7-1.noarch.rpm
 RUN yum -y install mesos marathon
