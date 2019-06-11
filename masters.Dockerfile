@@ -10,10 +10,10 @@ RUN systemctl start zookeeper
 
 COPY zk /etc/mesos/zk
 
-echo 2 > /etc/mesos-master/quorum
+RUN echo 2 > /etc/mesos-master/quorum
 
-systemctl stop mesos-slave.service
+RUN systemctl stop mesos-slave.service
 
-service mesos-master restart
+RUN service mesos-master restart
 
-service marathon restart
+RUN service marathon restart
